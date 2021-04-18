@@ -113,6 +113,22 @@ p {
 .item {
   margin-right: 50px;
 }
+.item-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.background-icon {
+  background: #f5f4fa;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
 
 .contact-list {
   display: flex;
@@ -141,6 +157,7 @@ p {
 
 .main-item {
   margin-right: 30px;
+  width: 270px;
 }
 .main-item:last-child {
   margin-right: 0px;
@@ -150,7 +167,6 @@ p {
   max-width: 696px;
   margin: 0 auto;
   margin-bottom: 40px;
-  /* padding-top: 200px; */
 
   font-family: Roboto;
   font-style: normal;
@@ -206,9 +222,6 @@ p {
 .footer-text {
   text-align: center;
   padding-bottom: 50px;
-  /* padding-top: 94px; */
-
-  /* margin-bottom: 50px; */
 
   font-weight: 700;
   font-size: 36px;
@@ -226,14 +239,43 @@ p {
 .team {
   display: flex;
   align-items: center;
-  /* padding-bottom: 94px; */
+}
+.social-icon-link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  /* fill: #afb1b8; */
+}
+
+.bg-color:hover {
+  background-color: #2196f3;
+  border-radius: 50%;
+}
+
+.color-icon {
+  fill: #afb1b8;
+}
+.color-icon:hover {
+  fill: #ffffff;
+}
+.social-link {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+.team-member {
+  padding: 30px 30px;
 }
 
 .team-card {
   width: 368px;
   margin-right: 30px;
-  /* padding-bottom: 30px; */
-  margin-bottom: 94px;
+
+  background-color: #ffffff;
+
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -248,7 +290,7 @@ p {
   height: 100%;
 }
 .name-team {
-  margin-top: 30px;
+  margin-bottom: 10px;
   text-align: center;
 
   font-weight: 700;
@@ -259,7 +301,6 @@ p {
   color: var(--dark-main-color);
 }
 .about-team {
-  margin-top: 10px;
   margin-bottom: 16px;
   text-align: center;
 
@@ -293,6 +334,82 @@ p {
   letter-spacing: 0.03em;
   color: var(--dark-sec-color);
 }
+.our-clients {
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 95px;
+  padding-bottom: 94px;
+}
+
+.section-title-clients {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+
+  color: var(--dark-main-color);
+}
+.clients-icon-list {
+  display: flex;
+}
+
+.clients-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-link {
+  display: flex;
+
+  width: 170px;
+  height: 90px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  align-items: center;
+
+  fill: #afb1b8;
+}
+.company-icon:hover {
+  fill: var(--sec-color);
+}
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+
+  fill: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+.footer-social-links:hover {
+  background-color: #2196f3;
+}
+.footer-social-item > li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-item {
+  display: flex;
+}
+
+.invite-text {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-bottom: 20px;
+  color: var(--main-color);
+}
+
+.footer-container {
+  margin-right: 70px;
+}
+.footer-social-icon {
+  width: 190px;
+  height: 78px;
+}
+
 /*Кнопки BUTTONS*/
 
 .hero-button {
@@ -355,6 +472,20 @@ p {
   background: var(--dark-background-color);
   padding-top: 200px;
   padding-bottom: 200px;
+
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/mainBackground.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .study-section {
@@ -382,10 +513,6 @@ p {
   width: calc((100% - 30px * 2) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
-  /* padding-bottom: 20px; */
-
-  /* box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2); */
 
   background: var(--main-color);
 }
@@ -400,6 +527,11 @@ p {
 }
 
 /* footer */
+.main-footer .container {
+  display: flex;
+  align-items: center;
+}
+
 .last-logo {
   margin-bottom: 20px;
 }
@@ -459,7 +591,6 @@ p {
   font-weight: bold;
   font-size: 26px;
   line-height: 31px;
-  /* identical to box height */
 
   letter-spacing: 0.03em;
 }

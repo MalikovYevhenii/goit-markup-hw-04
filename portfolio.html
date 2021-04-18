@@ -26,8 +26,21 @@
 
     </nav>
     <ul class="contact-list">
-      <li class="item"> <a class="tel-link" href="malito:info@example.com">info@devstudio.com</a> </li>
-      <li class="item"> <a class="tel-link" href="tel +380991111111">+380661111111</a> </li>
+      <li class="item">
+        <a class="tel-link" href="malito:info@example.com">
+          <svg class="item-icon" width="16" height="16">
+            <use href="./images/symbol-defs.svg#icon-envelope"></use>
+          </svg>
+          info@devstudio.com
+        </a>
+      </li>
+      <li class="item">
+        <a class="tel-link" href="tel +380991111111">
+          <svg class="item-icon" width="16" height="16">
+            <use href="./images/symbol-defs.svg#icon-smartphone"></use>
+          </svg>
+          +380661111111
+        </a></li>
     </ul>
     </div>
   </header>
@@ -114,20 +127,61 @@
   </main>
   <footer class="main-footer">
     <div class="container">
-      <a href="./portfolio.html" class="last-logo"></a>
+
+  <div class="footer-container">
+    <a href="./index.html" class="last-logo">
       <span class="logo-web">Web</span>
       <span class="logo-studio-footer">Studio</span>
-      <address class="addres">
-        <ul class="footer-adress">
-          <li class="footer-contact">
-            <p class="footer-street"> г. Киев, пр-т Леси Украинки, 26 </p>
+    </a>
+    <address class="addres">
+      <ul class="footer-adress">
+        <li class="footer-contact">
+          <p class="footer-street"> г. Киев, пр-т Леси Украинки, 26 </p>
+        </li>
+        <li class="footer-contact"><a class="footer-tel" href="malito:info@example.com">
+            info@example.com</a></li>
+        <li class="footer-contact"><a class="footer-tel" href="tel +380991111111">
+            +38 099 111 11 11 </a></li>
+      </ul>
+    </address>
+  </div>
+
+      <div class="footer-link-container">
+        <p class="invite-text">присоединяйтесь</p>
+      
+        <ul class="footer-social-item">
+          <li>
+            <a href class="footer-social-links">
+              <svg widht="20" height="20">
+                <use href="./images/symbol-defs.svg#icon-instagram-2"></use>
+              </svg>
+            </a>
           </li>
-          <li class="footer-contact"><a class="footer-tel" href="malito:info@example.com">
-              info@example.com</a></li>
-          <li class="footer-contact"><a class="footer-tel" href="tel +380991111111">
-              +38 099 111 11 11 </a></li>
+      
+          <li>
+            <a href class="footer-social-links">
+              <svg widht="20" height="20">
+                <use href="./images/symbol-defs.svg#icon-twitter-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href class="footer-social-links">
+              <svg widht="20" height="20">
+                <use href="./images/symbol-defs.svg#icon-facebook-1"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href class="footer-social-links">
+              <svg widht="20" height="20">
+                <use href="./images/symbol-defs.svg#icon-linkedin-1"></use>
+              </svg>
+            </a>
+          </li>
         </ul>
-      </address>
+      </div>
+
     </div>
   </footer>
 </body>
