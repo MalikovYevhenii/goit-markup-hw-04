@@ -9,6 +9,8 @@
   --dark-main-color: #212121;
   --dark-sec-color: #757575;
   --dark-add-color: rgba(255, 255, 255, 0.6);
+
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -70,6 +72,8 @@ p {
   background-color: var(--main-color);
 }
 .header-link {
+  position: relative;
+
   display: block;
 
   font-family: Roboto;
@@ -88,6 +92,18 @@ p {
 .header-link:hover,
 .header-link:focus {
   color: var(--sec-color);
+}
+
+.current::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--sec-color);
+  border-radius: 2px;
 }
 
 .header-nav {
@@ -148,8 +164,6 @@ p {
 .tel-link:focus {
   color: var(--sec-color);
 }
-
-/*Размеры и эффекты HEROO*/
 
 .main-list {
   display: flex;
@@ -240,31 +254,103 @@ p {
   display: flex;
   align-items: center;
 }
+.overlay-box {
+  position: relative;
+}
+.img-box {
+  display: block;
+}
+.overlay-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  padding-bottom: 27px;
+  padding-top: 27px;
+
+  background: rgba(47, 48, 58, 0.8);
+}
+.overlay-text-box {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--main-color);
+}
+
 .social-icon-link {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
   width: 44px;
   height: 44px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  /* fill: #afb1b8; */
+  color: #afb1b8;
+}
+.social-icon-link:hover,
+.social-icon-link:focus {
+  background-color: var(--sec-color);
+  color: var(--main-color);
+}
+.anim-text {
+  position: absolute;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 24px 63px 24px 63px;
+  overflow-y: scroll;
+  transform: translateY(100%);
+  transition: transform 250ms linear, opacity 250ms linear;
+
+  color: var(--main-color);
+}
+.overlay-anim {
+  position: relative;
+  overflow: hidden;
+}
+.product-item:hover .anim-text,
+.product-item:focus .anim-text {
+  transform: translate(0);
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.product-item:hover,
+.product-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.product-item {
+  display: block;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bg-color:hover {
-  background-color: #2196f3;
+  background-color: var(--sec-color);
   border-radius: 50%;
 }
 
 .color-icon {
-  fill: #afb1b8;
+  fill: currentColor;
 }
 .color-icon:hover {
-  fill: #ffffff;
+  fill: var(--main-color);
 }
 .social-link {
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: var(--main-color);
 }
 .team-member {
   padding: 30px 30px;
@@ -274,7 +360,7 @@ p {
   width: 368px;
   margin-right: 30px;
 
-  background-color: #ffffff;
+  background-color: var(--main-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -321,6 +407,7 @@ p {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
   color: var(--dark-main-color);
 }
 .about-card {
@@ -332,6 +419,7 @@ p {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
+
   color: var(--dark-sec-color);
 }
 .our-clients {
@@ -357,21 +445,25 @@ p {
 .clients-list-item:not(:last-child) {
   margin-right: 30px;
 }
+.company-icon {
+  fill: currentColor;
+}
 
 .client-link {
   display: flex;
 
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 90px;
-
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-color);
   border-radius: 4px;
-  align-items: center;
-
-  fill: #afb1b8;
+  color: var(--icon-color);
 }
-.company-icon:hover {
-  fill: var(--sec-color);
+.company-icon:hover,
+.company-icon:focus {
+  border-color: var(--sec-color);
+  color: var(--sec-color);
 }
 .footer-social-links {
   display: flex;
@@ -410,8 +502,6 @@ p {
   height: 78px;
 }
 
-/*Кнопки BUTTONS*/
-
 .hero-button {
   display: block;
   margin: auto;
@@ -440,7 +530,7 @@ p {
   align-items: center;
   margin-left: 8px;
   border-radius: 4px;
-  background: var(--sec-background-color);
+  background: var(--sec-color);
 }
 
 .btn:hover,
@@ -465,8 +555,6 @@ p {
   padding-right: 20px;
   padding-left: 20px;
 }
-
-/*hero*/
 
 .hero {
   background: var(--dark-background-color);
@@ -514,6 +602,11 @@ p {
   margin-right: 30px;
   margin-bottom: 30px;
 
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16); */
+
   background: var(--main-color);
 }
 .card-wrap:nth-child(3n) {
@@ -526,7 +619,6 @@ p {
   width: 100%;
 }
 
-/* footer */
 .main-footer .container {
   display: flex;
   align-items: center;
@@ -567,6 +659,7 @@ p {
   line-height: 24px;
 
   letter-spacing: 0.03em;
+
   color: var(--main-color);
 }
 .footer-tel {
@@ -585,7 +678,6 @@ p {
   color: var(--dark-add-color);
 }
 .logo-web {
-  color: #2196f3;
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
@@ -593,17 +685,19 @@ p {
   line-height: 31px;
 
   letter-spacing: 0.03em;
+
+  color: var(--sec-color);
 }
 .logo-studio {
-  color: #000000;
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
   line-height: 31px;
-  /* identical to box height */
 
   letter-spacing: 0.03em;
+
+  color: #000000;
 }
 .logo-studio-footer {
   font-family: Raleway;
